@@ -1,15 +1,55 @@
-package org.testng.test;
-
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-/**
- * The test does not look sophisticated, however it still verifies that testng-all.jar works to a
- * certain degree.
- */
-public class VerifyShadedJarWorksTest {
+import fortestng.TestNg;
+
+import org.testng.annotations.BeforeTest;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNull;
+import static org.testng.Assert.assertTrue;
+
+import org.testng.annotations.AfterTest;
+
+public class TestNG {
+	
+	
+	 @BeforeTest
+	  public void beforeTest() {
+		  
+	  }
+	  
+	 
   @Test
-  public void testHelloWorld() {
-    Assert.assertEquals(4, 2 + 2, "2 + 2");
+public void f() {
+int a=20;
+int b =30;
+assertTrue(a!=b);	  
   }
+  
+  
+  
+  
+  @Test(priority=1)
+  public void fullname() {
+String expected = "Sagar v";
+String actual = "Sagar v";
+
+
+assertEquals(expected,actual);	  
+  }
+  
+  
+  
+  @Test
+  public void null_() {
+String expected = null;
+assertNull(expected);  
+  }
+
+  @AfterTest
+  public void afterTest() {
+
+	  
+  }
+
 }
