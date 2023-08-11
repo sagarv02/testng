@@ -1,3 +1,4 @@
+package org.testng.test;
 import org.testng.annotations.Test;
 
 import fortestng.TestNg;
